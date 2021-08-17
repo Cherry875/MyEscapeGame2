@@ -8,7 +8,6 @@ public class Panel : MonoBehaviour
     public Panel rightPanel;
     public Panel leftPanel;
     public Panel backPanel;
-    public Panel forwardPanel;
     void Start()
     {
        place = this.transform.localPosition;

@@ -19,7 +19,7 @@ public class PanelChanger : MonoBehaviour
         showPanel(startPanel);
     }
 
-    private void showPanel(Panel nextPanel)
+    public void showPanel(Panel nextPanel)
     {
         currentPanel = nextPanel;
         Debug.Log(nextPanel+"に移動");
@@ -43,14 +43,6 @@ public class PanelChanger : MonoBehaviour
         showPanel(currentPanel.backPanel);
     }
 
-    // public void OnDesk()
-    // {
-    //     showPanel(currentPanel.backPanel);
-    // }
-    // public void OnSafe()
-    // {
-    //     showPanel(Panel2.KeyPanel);
-    // }
     // public void OnKeystand()
     // {
     //     showPanel(Panel2.LargeKye);
