@@ -10,8 +10,6 @@ public class GoToMain : MonoBehaviour
     public AudioClip start_sound;
     AudioSource audioSource; 
 
-    private Color color1,color2,color3;
-
     void Start()
     {
         audioSource = GetComponent<AudioSource>();

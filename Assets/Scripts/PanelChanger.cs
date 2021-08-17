@@ -32,13 +32,14 @@ public class PanelChanger : MonoBehaviour
     }
 
     //int配列に各パネルを見るためのポシションを格納
-    private int[] MainPosi = {0,0};
-    private int[] DeskPosi = {-1000,0};
-    private int[] SafePosi = {0,1500};
-    private int[] ShelfPosi = {-1000,1500};
-    private int[] KeyPanelPosi = {-1000,3000};
-    private int[] DoorPosi = {0,3000};
-    private int[] KyePosi = {-3000,0};
+    // private int[] MainPosi = {0,0};
+    private Vector2 DeskPosi = new Vector2(-1000,0);
+    private Vector2 SafePosi = new Vector2(0,1500);
+    private Vector2 ShelfPosi = new Vector2(-1000,1500);
+    private Vector2 KeyPanelPosi = new Vector2(-1000,3000);
+    private Vector2 DoorPosi = new Vector2(0,3000);
+    private Vector2 KyePosi = new Vector2(-3000,0);
+    private Vector2 MainPosi = new Vector2(0,0);
     //bool配列に各パネルで表示するべき矢印の情報を格納{left,back,right}
     private bool[] MainArrow = {true,true,true};
     private bool[] DeskArrow = {false,true,false};
@@ -52,7 +53,7 @@ public class PanelChanger : MonoBehaviour
     {
         if(nextpanel == Panel.LargeKye)
         {
-            this.transform.localPosition = new Vector2(KyePosi[0],KyePosi[1]);
+            this.transform.localPosition = KyePosi;
             currentPanel = Panel.LargeKye;
             leftArrow.SetActive(KyeArrow[0]);
             backArrow.SetActive(KyeArrow[1]);
@@ -60,7 +61,7 @@ public class PanelChanger : MonoBehaviour
         }        
         else if(nextpanel == Panel.Door)
         {
-            this.transform.localPosition = new Vector2(DoorPosi[0],DoorPosi[1]);
+            this.transform.localPosition = DoorPosi;
             currentPanel = Panel.Door;
             leftArrow.SetActive(DoorArrow[0]);
             backArrow.SetActive(DoorArrow[1]);
@@ -68,7 +69,7 @@ public class PanelChanger : MonoBehaviour
         }
         else if(nextpanel == Panel.Main)
         {
-            this.transform.localPosition = new Vector2(MainPosi[0],MainPosi[1]);
+            this.transform.localPosition = MainPosi;
             currentPanel = Panel.Main;
             leftArrow.SetActive(MainArrow[0]);
             backArrow.SetActive(MainArrow[1]);
@@ -77,7 +78,7 @@ public class PanelChanger : MonoBehaviour
         }
         else if(nextpanel == Panel.Safe)
         {
-            this.transform.localPosition = new Vector2(SafePosi[0],SafePosi[1]);
+            this.transform.localPosition = SafePosi;
             currentPanel = Panel.Safe;
             leftArrow.SetActive(SafeArrow[0]);
             backArrow.SetActive(SafeArrow[1]);
@@ -86,7 +87,7 @@ public class PanelChanger : MonoBehaviour
         }
         else if(nextpanel == Panel.Desk)
         {
-            this.transform.localPosition = new Vector2(DeskPosi[0],DeskPosi[1]);
+            this.transform.localPosition = DeskPosi;
             currentPanel = Panel.Desk;
             leftArrow.SetActive(DeskArrow[0]);
             backArrow.SetActive(DeskArrow[1]);
@@ -95,7 +96,7 @@ public class PanelChanger : MonoBehaviour
         }
         else if(nextpanel == Panel.Shelf)
         {
-            this.transform.localPosition = new Vector2(ShelfPosi[0],ShelfPosi[1]);
+            this.transform.localPosition = ShelfPosi;
             currentPanel = Panel.Shelf;
             leftArrow.SetActive(ShelfArrow[0]);
             backArrow.SetActive(ShelfArrow[1]);
@@ -104,7 +105,7 @@ public class PanelChanger : MonoBehaviour
         }
         else if(nextpanel == Panel.KeyPanel)
         {
-            this.transform.localPosition = new Vector2(KeyPanelPosi[0], KeyPanelPosi[1]);
+            this.transform.localPosition = KeyPanelPosi;
             currentPanel = Panel.KeyPanel;
             leftArrow.SetActive(KeyPanelArrow[0]);
             backArrow.SetActive(KeyPanelArrow[1]);
