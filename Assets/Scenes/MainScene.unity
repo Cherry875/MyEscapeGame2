@@ -1066,6 +1066,7 @@ GameObject:
   - component: {fileID: 291837682}
   - component: {fileID: 291837684}
   - component: {fileID: 291837683}
+  - component: {fileID: 291837685}
   m_Layer: 5
   m_Name: DeskPanel
   m_TagString: Untagged
@@ -1136,6 +1137,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291837681}
   m_CullTransparentMesh: 0
+--- !u!114 &291837685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291837681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b23cb6b8cc35a4679a515061eac35a98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rightPanel: {fileID: 291837685}
+  leftPanel: {fileID: 291837685}
+  backPanel: {fileID: 1183421143}
 --- !u!1 &313145205
 GameObject:
   m_ObjectHideFlags: 0
@@ -2574,6 +2590,7 @@ GameObject:
   - component: {fileID: 506528450}
   - component: {fileID: 506528449}
   - component: {fileID: 506528451}
+  - component: {fileID: 506528452}
   m_Layer: 5
   m_Name: SafeBox
   m_TagString: Untagged
@@ -2682,9 +2699,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1880508255}
-        m_TargetAssemblyTypeName: PanelChanger, Assembly-CSharp
-        m_MethodName: OnSafe
+      - m_Target: {fileID: 506528452}
+        m_TargetAssemblyTypeName: zoomablePlace, Assembly-CSharp
+        m_MethodName: onClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2694,6 +2711,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &506528452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506528447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b9ac475fd0644e0a899713cbc48288d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelChanger: {fileID: 1880508255}
+  zoomedPanel: {fileID: 510719362}
 --- !u!1 &510719358
 GameObject:
   m_ObjectHideFlags: 0
@@ -2705,6 +2736,7 @@ GameObject:
   - component: {fileID: 510719359}
   - component: {fileID: 510719361}
   - component: {fileID: 510719360}
+  - component: {fileID: 510719362}
   m_Layer: 5
   m_Name: KeyPanel
   m_TagString: Untagged
@@ -2774,6 +2806,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 510719358}
   m_CullTransparentMesh: 0
+--- !u!114 &510719362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510719358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b23cb6b8cc35a4679a515061eac35a98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rightPanel: {fileID: 510719362}
+  leftPanel: {fileID: 510719362}
+  backPanel: {fileID: 1563687684}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2872,6 +2919,7 @@ GameObject:
   - component: {fileID: 539434482}
   - component: {fileID: 539434481}
   - component: {fileID: 539434484}
+  - component: {fileID: 539434485}
   m_Layer: 5
   m_Name: DoorPanel
   m_TagString: Untagged
@@ -3246,6 +3294,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &539434485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539434477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b23cb6b8cc35a4679a515061eac35a98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rightPanel: {fileID: 539434485}
+  leftPanel: {fileID: 539434485}
+  backPanel: {fileID: 1183421143}
 --- !u!1 &552761610
 GameObject:
   m_ObjectHideFlags: 0
@@ -3333,6 +3396,7 @@ GameObject:
   - component: {fileID: 586090308}
   - component: {fileID: 586090307}
   - component: {fileID: 586090306}
+  - component: {fileID: 586090309}
   m_Layer: 5
   m_Name: KeyStandSmall
   m_TagString: Untagged
@@ -3403,9 +3467,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1880508255}
-        m_TargetAssemblyTypeName: PanelChanger, Assembly-CSharp
-        m_MethodName: OnKeystand
+      - m_Target: {fileID: 586090309}
+        m_TargetAssemblyTypeName: zoomablePlace, Assembly-CSharp
+        m_MethodName: onClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3453,6 +3517,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 586090304}
   m_CullTransparentMesh: 1
+--- !u!114 &586090309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586090304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b9ac475fd0644e0a899713cbc48288d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelChanger: {fileID: 1880508255}
+  zoomedPanel: {fileID: 1112032419}
 --- !u!1 &587555184
 GameObject:
   m_ObjectHideFlags: 0
@@ -4393,6 +4471,7 @@ GameObject:
   - component: {fileID: 708858051}
   - component: {fileID: 708858052}
   - component: {fileID: 708858053}
+  - component: {fileID: 708858054}
   m_Layer: 5
   m_Name: ShelfPanel
   m_TagString: Untagged
@@ -4670,6 +4749,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &708858054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708858047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b23cb6b8cc35a4679a515061eac35a98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rightPanel: {fileID: 1183421143}
+  leftPanel: {fileID: 708858054}
+  backPanel: {fileID: 708858054}
 --- !u!1 &734367527
 GameObject:
   m_ObjectHideFlags: 0
@@ -5992,6 +6086,7 @@ GameObject:
   - component: {fileID: 1112032415}
   - component: {fileID: 1112032417}
   - component: {fileID: 1112032418}
+  - component: {fileID: 1112032419}
   m_Layer: 5
   m_Name: KyeStandPanel
   m_TagString: Untagged
@@ -6095,6 +6190,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SmallKye: {fileID: 377809897}
   TrueKye: {fileID: 1556458690}
+--- !u!114 &1112032419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112032413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b23cb6b8cc35a4679a515061eac35a98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rightPanel: {fileID: 1112032419}
+  leftPanel: {fileID: 1112032419}
+  backPanel: {fileID: 539434485}
 --- !u!1 &1123480691
 GameObject:
   m_ObjectHideFlags: 0
@@ -6560,6 +6670,7 @@ GameObject:
   - component: {fileID: 1183421140}
   - component: {fileID: 1183421142}
   - component: {fileID: 1183421141}
+  - component: {fileID: 1183421143}
   m_Layer: 5
   m_Name: MainPanel
   m_TagString: Untagged
@@ -6628,6 +6739,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1183421139}
   m_CullTransparentMesh: 0
+--- !u!114 &1183421143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183421139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b23cb6b8cc35a4679a515061eac35a98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rightPanel: {fileID: 1563687684}
+  leftPanel: {fileID: 708858054}
+  backPanel: {fileID: 539434485}
 --- !u!1 &1207254298
 GameObject:
   m_ObjectHideFlags: 0
@@ -8558,6 +8684,7 @@ GameObject:
   - component: {fileID: 1563687682}
   - component: {fileID: 1563687681}
   - component: {fileID: 1563687683}
+  - component: {fileID: 1563687684}
   m_Layer: 5
   m_Name: SafePanel
   m_TagString: Untagged
@@ -8644,6 +8771,21 @@ MonoBehaviour:
   ClosedSafeBox: {fileID: 506528447}
   OpenSafebox: {fileID: 1571752227}
   SmallBin: {fileID: 735735354}
+--- !u!114 &1563687684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563687679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b23cb6b8cc35a4679a515061eac35a98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rightPanel: {fileID: 1563687684}
+  leftPanel: {fileID: 1183421143}
+  backPanel: {fileID: 1563687684}
 --- !u!1 &1571752227
 GameObject:
   m_ObjectHideFlags: 0
@@ -9605,6 +9747,7 @@ GameObject:
   - component: {fileID: 1852106556}
   - component: {fileID: 1852106555}
   - component: {fileID: 1852106557}
+  - component: {fileID: 1852106558}
   m_Layer: 5
   m_Name: desk
   m_TagString: Untagged
@@ -9713,9 +9856,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1880508255}
-        m_TargetAssemblyTypeName: PanelChanger, Assembly-CSharp
-        m_MethodName: OnDesk
+      - m_Target: {fileID: 1852106558}
+        m_TargetAssemblyTypeName: zoomablePlace, Assembly-CSharp
+        m_MethodName: onClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9725,6 +9868,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1852106558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852106553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b9ac475fd0644e0a899713cbc48288d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelChanger: {fileID: 1880508255}
+  zoomedPanel: {fileID: 291837685}
 --- !u!1 &1880508253
 GameObject:
   m_ObjectHideFlags: 0
@@ -9778,6 +9935,7 @@ MonoBehaviour:
   rightArrow: {fileID: 19633658}
   leftArrow: {fileID: 822103306}
   backArrow: {fileID: 593040408}
+  startPanel: {fileID: 539434485}
 --- !u!222 &1880508256
 CanvasRenderer:
   m_ObjectHideFlags: 0
