@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class UseItem : MonoBehaviour
 {
-    public enum BoxSlot
-    {
-        box1,
-        box2,
-        box3,
-        box4,
-        box5,
-    }
-    public BoxSlot box;
+
+    public int boxId;
 
     //インスタンス化
     public static UseItem UIM;
@@ -35,33 +28,14 @@ public class UseItem : MonoBehaviour
 
     public void OnBox()
     {
-        if(box == BoxSlot.box1 && ItemBox.occupation >=1)
-        {
-            ProcessSort(box,0);
-        }
-        else if(box == BoxSlot.box2 && ItemBox.occupation >=2)
-        {
-            ProcessSort(box,1);
-        }
-        else if(box == BoxSlot.box3 && ItemBox.occupation >=3)
-        {
-            ProcessSort(box,2);
-        }
-        else if(box == BoxSlot.box4 && ItemBox.occupation >=4)
-        {
-            ProcessSort(box,3);
-        }
-        else if(box == BoxSlot.box5 && ItemBox.occupation >=5)
-        {
-            ProcessSort(box,4);
-        }
-        else
-        {
+        if(ItemBox.occupation > boxId){
+            ProcessSort(boxId);
+        }else{
             Debug.Log("No item here");
         }
     }
 
-    private void ProcessSort(BoxSlot box,int num)
+    private void ProcessSort(int num)
     {
         if(SelectedItem == ItemBox.BoxContent[num])
         {
