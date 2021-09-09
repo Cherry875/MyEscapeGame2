@@ -9,6 +9,6 @@ public class zoomablePlace : MonoBehaviour
 
     public void onClick()
     {
-        panelChanger.showPanel(zoomedPanel);
+        panelChanger.showPanel(zoomedPanel); 
     }
 }

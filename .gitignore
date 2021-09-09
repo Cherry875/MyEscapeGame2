@@ -2,3 +2,5 @@ Library/
 Logs/
 Packages/
 workspace.code-workspace
+.DS_Store
+Temp
