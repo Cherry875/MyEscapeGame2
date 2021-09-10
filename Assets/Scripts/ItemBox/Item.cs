@@ -22,16 +22,15 @@ public class Item : MonoBehaviour
 
     public Descriptions descriptionPanel;
 
-    // public Desciprtions(ItemType type){
-    //     // if(itemtype==type){return descriptionPanel;}
-    // }
+    public Sprite sprite;
 
-    //クリックした時にアイテムボックスに格納されて消え、音が鳴る
 
    void Start()
     {
         
     }
+
+    //クリックした時にアイテムボックスに格納されて消え、音が鳴る
 
     public void GetItem()
     {

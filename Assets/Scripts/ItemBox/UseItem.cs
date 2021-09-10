@@ -42,28 +42,29 @@ public class UseItem : MonoBehaviour
             //同じBoxを連続クリックしているときの処理
             if(ClickTimes==1)
             {
+                Debug.Log(SelectedItem+" clicked twice!");
                 //同じBoxを連続2回クリックされたら
                 DescriptionController.descon.ShowDetail(SelectedItem);
-                Debug.Log(SelectedItem+" clicked twice!");
             }
             else if(ClickTimes==2)
             {
-                //3回連続クリックされたらリセット
+                Debug.Log(SelectedItem+" clicked 3 times!");
+               //3回連続クリックされたらリセット
                 FrameControler.FMC.SelectorReset();
                 DescriptionController.descon.HideDetail(SelectedItem);
                 SelectedItem = DescriptionController.def();
-                Debug.Log(SelectedItem+" clicked 3 times!");
             }
             else if(ClickTimes==0)
             {
+                Debug.Log(SelectedItem+" clicked again"); 
                 //リセット後はelseと同じ処理
-                DoSelect(num);
-                Debug.Log(SelectedItem+" clicked again");                                
+                DoSelect(num);                               
             }
         }
         else
         {
             //初めてクリックされた時に起こること
+            if(SelectedItem != DescriptionController.dummy){DescriptionController.descon.HideDetail(SelectedItem);}
             ClickTimes = 0;
             DoSelect(num);
             Debug.Log(SelectedItem+" clicked for the first time!");
