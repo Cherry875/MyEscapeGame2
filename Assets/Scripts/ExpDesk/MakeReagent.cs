@@ -37,7 +37,7 @@ public class MakeReagent : MonoBehaviour
 
     public void OnSmallJar()
     {
-        if(UseItem.SelectedItem == Item.ItemType.Pipet)
+        if(UseItem.SelectedItem.itemtype == Item.ItemType.Pipet)
         {
             DoSmallJar();
         }
@@ -45,7 +45,7 @@ public class MakeReagent : MonoBehaviour
 
     public void OnLargeJar()
     {
-        if(UseItem.SelectedItem == Item.ItemType.Pipet)
+        if(UseItem.SelectedItem.itemtype == Item.ItemType.Pipet)
         {
             DoLargeJar();
         }

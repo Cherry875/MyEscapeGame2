@@ -20,6 +20,15 @@ public class Item : MonoBehaviour
 
     public ItemType itemtype;
 
+    public Descriptions descriptionPanel;
+
+    public Sprite sprite;
+
+
+   void Start()
+    {
+        
+    }
 
     //クリックした時にアイテムボックスに格納されて消え、音が鳴る
 
@@ -27,7 +36,7 @@ public class Item : MonoBehaviour
     {
         Debug.Log(itemtype+"を取得、occupation="+ItemBox.occupation);
         AudioItem.ADI.PlayGetSound();
-        ItemBox.IBX.SetItem(itemtype);
+        ItemBox.IBX.SetItem(this);
         gameObject.SetActive(false);
     }
 }

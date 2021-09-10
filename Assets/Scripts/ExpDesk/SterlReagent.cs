@@ -29,7 +29,7 @@ public class SterlReagent : MonoBehaviour
     public void OnBeaker()
     {
         //もしオレンジだったら、かきまぜて完成させる
-        if(UseItem.SelectedItem == Item.ItemType.Sterler && MakeReagent.complete)
+        if(UseItem.SelectedItem.itemtype == Item.ItemType.Sterler && MakeReagent.complete)
         {
             //ビーカーを透明にする
             Color c = Beaker_img.color;
@@ -38,7 +38,7 @@ public class SterlReagent : MonoBehaviour
             ShowAnime();
         }
         //もし完成してなかったら、ただかき混ぜる
-        else if(UseItem.SelectedItem == Item.ItemType.Sterler && !MakeReagent.complete)
+        else if(UseItem.SelectedItem.itemtype == Item.ItemType.Sterler && !MakeReagent.complete)
         {
             ShowFakeAnime();
         }

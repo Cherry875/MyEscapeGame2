@@ -23,7 +23,7 @@ public class Door : MonoBehaviour
     
     public void ClickDoor()
     {
-        if(UseItem.SelectedItem == Item.ItemType.TrueKye)
+        if(UseItem.SelectedItem.itemtype == Item.ItemType.TrueKye)
         {
             audioSource.PlayOneShot(key_open, 0.7F);
             Invoke("DoOpenDoor",1.0f);

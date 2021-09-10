@@ -24,7 +24,7 @@ public class OpenShelf : MonoBehaviour
 
     public void OnShelf()
     {
-        if(UseItem.SelectedItem == Item.ItemType.Key)
+        if(UseItem.SelectedItem.itemtype == Item.ItemType.Key)
         {
             Open(true);
             PlayShelfOpenSound();
@@ -43,7 +43,7 @@ public class OpenShelf : MonoBehaviour
         Closed.SetActive(!which);
         if(which)
         {
-            ItemBox.IBX.DeleteItem(Item.ItemType.Key);
+            ItemBox.IBX.DeleteItemFromType(Item.ItemType.Key);
         }
     }
 

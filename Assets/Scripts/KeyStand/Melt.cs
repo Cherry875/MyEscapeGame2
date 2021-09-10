@@ -33,10 +33,10 @@ public class Melt : MonoBehaviour
 
     public void OnStand()
     {
-        if(UseItem.SelectedItem == Item.ItemType.Reagent)
+        if(UseItem.SelectedItem.itemtype == Item.ItemType.Reagent)
         {
             DoMelt();
-            ItemBox.IBX.DeleteItem(Item.ItemType.Reagent);
+            ItemBox.IBX.DeleteItem(UseItem.SelectedItem);
         }
     }
 

@@ -22,11 +22,11 @@ public class SetJar : MonoBehaviour
 
     public void SetSmallJar()
     {
-        if(UseItem.SelectedItem == Item.ItemType.Jar)
+        if(UseItem.SelectedItem.itemtype == Item.ItemType.Jar)
         {
             SmallJar.SetActive(true);
             PlaySettingSound();
-            ItemBox.IBX.DeleteItem(Item.ItemType.Jar);
+            ItemBox.IBX.DeleteItemFromType(Item.ItemType.Jar);
         }
     }
 
