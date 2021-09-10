@@ -376,6 +376,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemtype: 6
   descriptionPanel: {fileID: 1446344677}
+  sprite: {fileID: 21300000, guid: 6e43e77fee0234ecfa5faa54e3443b2a, type: 3}
 --- !u!114 &69574105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1960,6 +1961,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemtype: 4
   descriptionPanel: {fileID: 1683731215}
+  sprite: {fileID: 21300000, guid: 957318f5f872646afab7d6275a1c3e81, type: 3}
 --- !u!1 &377809897
 GameObject:
   m_ObjectHideFlags: 0
@@ -2051,6 +2053,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemtype: 7
   descriptionPanel: {fileID: 0}
+  sprite: {fileID: 0}
 --- !u!114 &377809902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2638,21 +2641,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 766e1320b10d1405daffd86595826e27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paper_sprite: {fileID: 21300000, guid: 3fd080235fcba4a8ca6fef493f38750e, type: 3}
-  key_sprite: {fileID: 21300000, guid: 40117e13349ec4226b6a371451eaee83, type: 3}
-  jar_sprite: {fileID: 21300000, guid: 4d9120a11f25a4b008ab800deef4a780, type: 3}
-  book_sprite: {fileID: 21300000, guid: f9614323f9abe493dbcedd6d9fc60b26, type: 3}
-  new_key_sprite: {fileID: 0}
-  pipet_sprite: {fileID: 21300000, guid: 957318f5f872646afab7d6275a1c3e81, type: 3}
-  sterler_sprite: {fileID: 21300000, guid: a7b67907da0f948cbb4e8a9cd37ba7fd, type: 3}
-  reagent_sprite: {fileID: 21300000, guid: 6e43e77fee0234ecfa5faa54e3443b2a, type: 3}
-  truekey_sprite: {fileID: 21300000, guid: 43e1cf140809b4a0b8cf5951862c7bac, type: 3}
-  Box1: {fileID: 587555186}
-  Box2: {fileID: 204801875}
-  Box3: {fileID: 673278916}
-  Box4: {fileID: 1777305850}
-  Box5: {fileID: 1065992841}
-  Box6: {fileID: 1220659592}
+  Boxes:
+  - {fileID: 587555186}
+  - {fileID: 204801875}
+  - {fileID: 673278916}
+  - {fileID: 1777305850}
+  - {fileID: 1065992841}
+  - {fileID: 1220659592}
 --- !u!1 &506528447
 GameObject:
   m_ObjectHideFlags: 0
@@ -4255,6 +4250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemtype: 3
   descriptionPanel: {fileID: 1318512054}
+  sprite: {fileID: 21300000, guid: f9614323f9abe493dbcedd6d9fc60b26, type: 3}
 --- !u!114 &637874979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5062,6 +5058,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemtype: 1
   descriptionPanel: {fileID: 1060422998}
+  sprite: {fileID: 21300000, guid: 4d9120a11f25a4b008ab800deef4a780, type: 3}
 --- !u!1 &748842255
 GameObject:
   m_ObjectHideFlags: 0
@@ -5190,6 +5187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemtype: 5
   descriptionPanel: {fileID: 1619067021}
+  sprite: {fileID: 21300000, guid: a7b67907da0f948cbb4e8a9cd37ba7fd, type: 3}
 --- !u!114 &754745055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5246,7 +5244,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 754745054}
         m_TargetAssemblyTypeName: Item, Assembly-CSharp
         m_MethodName: GetItem
         m_Mode: 1
@@ -5800,6 +5798,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemtype: 0
   descriptionPanel: {fileID: 2074466333}
+  sprite: {fileID: 21300000, guid: 40117e13349ec4226b6a371451eaee83, type: 3}
 --- !u!1 &1024969808
 GameObject:
   m_ObjectHideFlags: 0
@@ -8742,6 +8741,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemtype: 7
   descriptionPanel: {fileID: 493745347}
+  sprite: {fileID: 21300000, guid: 43e1cf140809b4a0b8cf5951862c7bac, type: 3}
 --- !u!114 &1556458694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10518,6 +10518,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemtype: 2
   descriptionPanel: {fileID: 353791461}
+  sprite: {fileID: 21300000, guid: 3fd080235fcba4a8ca6fef493f38750e, type: 3}
 --- !u!1 &2053308851
 GameObject:
   m_ObjectHideFlags: 0
