@@ -16,13 +16,13 @@ public class UseItem : MonoBehaviour
 
     //記録のために使う変数の指定
     public static int ClickTimes;
-    public static Item.ItemType SelectedItem;
+    public static Item SelectedItem;
 
     private void Start()
     {
         //FrameControler.FMC.SelectorReset();
         ClickTimes = 0;
-        SelectedItem = Item.ItemType.non;
+        SelectedItem = DescriptionController.def();
     }
 
 
@@ -37,23 +37,21 @@ public class UseItem : MonoBehaviour
 
     private void ProcessSort(int num)
     {
-        if(SelectedItem == ItemBox.BoxContent[num])
+        if(SelectedItem == ItemBox.BoxContents[num])
         {
             //同じBoxを連続クリックしているときの処理
             if(ClickTimes==1)
             {
                 //同じBoxを連続2回クリックされたら
-                Descriptions.DSC.ShowDetail(ItemBox.BoxContent[num]);
-                ClickTimes++;
+                DescriptionController.descon.ShowDetail(SelectedItem);
                 Debug.Log(SelectedItem+" clicked twice!");
             }
             else if(ClickTimes==2)
             {
                 //3回連続クリックされたらリセット
                 FrameControler.FMC.SelectorReset();
-                Descriptions.DSC.HideDetail();
-                ClickTimes = 0;
-                SelectedItem = Item.ItemType.non;
+                DescriptionController.descon.HideDetail(SelectedItem);
+                SelectedItem = DescriptionController.def();
                 Debug.Log(SelectedItem+" clicked 3 times!");
             }
             else if(ClickTimes==0)
@@ -70,6 +68,7 @@ public class UseItem : MonoBehaviour
             DoSelect(num);
             Debug.Log(SelectedItem+" clicked for the first time!");
         }
+            ClickTimes = (ClickTimes + 1) % 3;
     }
 
     private void DoSelect(int num)
@@ -77,7 +76,6 @@ public class UseItem : MonoBehaviour
         FrameControler.FMC.SelectorReset();
         FrameControler.FMC.SelectorSet(num);
         AudioItem.ADI.PlaySelectSound();
-        SelectedItem = ItemBox.BoxContent[num];
-        ClickTimes++;
+        SelectedItem = ItemBox.BoxContents[num];
     }
 }

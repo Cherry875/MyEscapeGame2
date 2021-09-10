@@ -9,8 +9,8 @@ public class GetReagent : MonoBehaviour
 
     public void ReturnItems()
     {
-        ItemBox.IBX.DeleteItem(Item.ItemType.Pipet);
-        ItemBox.IBX.DeleteItem(Item.ItemType.Sterler);
+        ItemBox.IBX.DeleteItemFromType(Item.ItemType.Pipet);
+        ItemBox.IBX.DeleteItemFromType(Item.ItemType.Sterler);
         Stand.SetActive(true);
         without.SetActive(false);
     }
